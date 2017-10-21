@@ -1,0 +1,38 @@
+<div class="container">
+
+    <h2>Select Form</h2>
+    <div class="funkyradio">
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio1"/>
+            <label for="radio1" (click)="onSelect('text')" >Text</label>
+        </div>
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio2"/>
+            <label for="radio2" (click)="onSelect('password')" >Password</label>
+        </div>
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio3" />
+            <label for="radio3" (click)="onSelect('textarea')" >Textarea</label>
+        </div>
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio4" />
+            <label for="radio4" (click)="onSelect('radio')" >Radio Buttons</label>
+        </div>
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5" (click)="onSelect('checkbox')" >Checkboxes</label>
+        </div>
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6" (click)="onSelect('select')" >Select</label>
+        </div>
+    </div>
+</div>
+
+<my-text *ngIf="this.valueCheck.text"></my-text>
+<my-password *ngIf="this.valueCheck.password" ></my-password>
+<my-textarea *ngIf="this.valueCheck.textarea" ></my-textarea>
+<my-radio *ngIf="this.valueCheck.radio" ></my-radio>
+<my-checkbox *ngIf="this.valueCheck.checkbox" ></my-checkbox>
+<my-select *ngIf="this.valueCheck.select" ></my-select>
+<my-json></my-json>

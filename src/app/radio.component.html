@@ -1,0 +1,51 @@
+<div class="container">
+	<div class="radio form-display">
+		<div class="output-form">
+			<div class="output-form-title">
+				<h2> Set Options </h2>
+			</div>
+			<hr class="output-form-hr-line">
+			<div class="form-wrapper">
+				<form #newRadio>
+					<div class="form-group">
+						<label>{{label}}</label>
+					</div>
+
+				</form>
+			</div>
+		</div>
+		<div class="edit-properties">
+			<div class="edit-properties-title">
+				<h3>Edit Properties:</h3>
+			</div>
+			<hr class="output-form-hr-line">
+			<div class="add-radio">
+				<form  #radioForm="ngForm">
+					<div class="form-group">
+						<label for="add-radio">Add New Radio:</label>		
+						<input type="text" [(ngModel)]="radioValue" name="radioValue" class="form-control type-radio" id="add-radio" placeholder="Add new radio">
+					<button (click)="addRadio(); radioForm.reset()" class="btn btn-primary add-radio-btn" >Add</button>
+					</div>
+				</form>	
+			</div>
+			<hr class="output-form-hr-line-rd">
+			<div class="edit-form">
+				<form class="form-horizontal" (ngSubmit)="storeData(); editForm.reset()" #editForm="ngForm" >
+					<div class="form-group form-fld">
+						<label class="control-label col-sm-2" for="label">Label:</label>
+						<div class="col-sm-10">		
+							<input type="text" [(ngModel)]="label" name="label" class="changeForm form-control" id="label" placeholder="Add/edit control label here">
+						</div>
+					</div>
+					<div class="form-group form-fld">
+						<label class="control-label col-sm-2" for="name">Name:</label>
+						<div class="col-sm-10">	
+							<input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" placeholder="Add/ edit name here">
+						</div>	
+					</div>
+					<button class="btn btn-primary" type="submit">Ok</button>	
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

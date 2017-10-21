@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="json-output-form">
+        <div class="json-output-title">
+            <h2>Form JSON Output</h2>
+        </div>
+        <hr style="padding:10px">
+        <div class="josn-output-data">
+        	<!-- {{myArray | json }} -->
+            <pre>
+            	<span *ngFor="let item of myArray; let i='index'">form-control-{{i}}  {{item | json}}</span>
+            	<br>
+            </pre>
+        </div>
+        <!-- <button (click)="add()">add</button> -->
+    </div>
+</div>
